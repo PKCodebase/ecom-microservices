@@ -1,9 +1,9 @@
 spring:
   application:
-    name: user-service
+    name: order-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/user
+    url: jdbc:postgresql://localhost:5432/order
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -19,4 +19,4 @@ spring:
           time_zone: Asia/Kolkata
 
 server:
-  port: 8082
+  port: 8083

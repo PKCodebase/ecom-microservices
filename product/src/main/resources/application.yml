@@ -1,14 +1,15 @@
 spring:
   application:
-    name: user-service
+    name: product-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/user
+    url: jdbc:postgresql://localhost:5432/product
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
 
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
     hibernate:
       ddl-auto: update
@@ -19,4 +20,4 @@ spring:
           time_zone: Asia/Kolkata
 
 server:
-  port: 8082
+  port: 8081
