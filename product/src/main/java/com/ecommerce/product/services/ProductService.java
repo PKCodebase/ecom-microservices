@@ -74,7 +74,7 @@ public class ProductService {
    public boolean deleteProductById(Long id){
        return productRepository.findById(id)
                .map(product -> {
-                   product.setActive(true);
+                   product.setActive(false);
                    productRepository.save(product);
                    return true;
                }).orElse(false);
