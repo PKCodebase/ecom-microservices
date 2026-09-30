@@ -2,21 +2,25 @@ spring:
   application:
     name: user-service
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/user
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
 
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
-        jdbc:
-          time_zone: Asia/Kolkata
+  mongodb:
+        uri: mongodb://localhost:27017/userdb
+
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/user
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
+#
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        jdbc:
+#          time_zone: Asia/Kolkata
 
 server:
   port: 8082

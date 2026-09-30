@@ -68,16 +68,16 @@ public class UserService {
     }
 
 
-    public Optional<UserResponse> fetchUser(Long id) {
+    public Optional<UserResponse> fetchUser(String id) {
         logger.info("Fetching user by ID: {}", id);
 
-        return userRepository.findById(id)
+        return userRepository.findById(String.valueOf(id))
                 .map(this::mapToUserResponse);
     }
 
 
-    public boolean updateUserById(Long id,UserRequest updateUser ){
-        return userRepository.findById(id)
+    public boolean updateUserById(String id,UserRequest updateUser ){
+        return userRepository.findById(String.valueOf(id))
                 .map(existingUser -> {
                     updateUserFromRequest(existingUser, updateUser);
                     userRepository.save(existingUser);
