@@ -3,13 +3,14 @@ spring:
     name: product-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/product
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/product
+    url: jdbc:mysql://localhost:3306/product
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true
     hibernate:
       ddl-auto: update
