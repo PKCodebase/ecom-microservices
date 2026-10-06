@@ -5,6 +5,7 @@ spring:
 
   mongodb:
         uri: mongodb://localhost:27017/userdb
+        database: userdb
 
 #  datasource:
 #    url: jdbc:postgresql://localhost:5432/user
